@@ -1,14 +1,9 @@
-# Your Name Here
+# Mak Weinzierl
 # UWYO COSC 1010
-# Submission Date
-# Lab 03 
-# Lab Section: 
-# Sources, people worked with, help given to: 
-# your
-# comments
-# here
-
-
+# October 3, 2024
+# Lab 04
+# Lab Section: 12
+# Sources: Working With Lists lecture
 
 # This is your second lab section. It will primarily be about working with lists
 # Complete all sections of this assignment 
@@ -51,7 +46,6 @@ max_temps = [
     51, 55, 55, 54, 53, 51, 43, 23, 20, 30,
     35, 32, 41, 48, 44
 ]
-
 
 min_temps = [
     23, 14, 7, 11, 13, 22, 15, 21, 23, 31,
@@ -99,7 +93,21 @@ min_temps = [
 # You cannot use any pre-existing functions (like mean()) and must perform the calculations manually.
 # Output the results of both calculations.
 
+max_temp_sum = 0
+min_temp_sum = 0
+for temp in range(0,len(max_temps)):
+    max_temp_sum += max_temps[temp]
+    min_temp_sum += min_temps[temp]
+print(f"The average maximum temperature is {max_temp_sum / len(max_temps)}.")
+print(f"The average minimum temperature is {min_temp_sum / len(min_temps)}.")
+
 # For the next part, determine the highest and lowest recorded temperatures.
 # HINT: You can find this information without using any logic or looping.
 
+max_temps.sort()
+print(f"The highest recorded maximum temperature is {max_temps[-1]}.")
+print(f"The lowest recorded maximum temperature is {max_temps[0]}.")
 
+min_temps.sort()
+print(f"The highest recorded minimum temperature is {min_temps[-1]}.")
+print(f"The lowest recorded minimum temperature is {min_temps[0]}.")
